@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kippy Coop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <span class="logo" onclick="showPage('home')">Kippy Coop</span>
+  <div class="nav-links">
+    <a onclick="showPage('story')">Story</a>
+    <a onclick="showPage('collection')">Collection</a>
+    <a onclick="showPage('shop')">Shop</a>
+  </div>
+  <div class="nav-icons">
+    <button class="nav-icon" onclick="showPage('login')" title="Account">&#9711;</button>
+    <button class="nav-icon" onclick="toggleCart()" title="Cart">&#9415; <span class="cart-badge" id="cart-badge">2</span></button>
+  </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-egg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Hội An · Vietnam · Est. 2024</div>
+      <div class="hero-title">Kippy<br>Coop</div>
+      <div class="hero-sub">Eggshell artistry · Indochina heritage</div>
+      <button class="btn btn-outline" onclick="showPage('shop')">Explore Collection</button>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+  </div>
+
+  <div class="eco-strip">
+    <div>
+      <div class="section-label">Our Philosophy</div>
+      <div class="section-title">Beauty born from what remains</div>
+      <div class="section-body">Every lamp shade, every sheet of paper carries the quiet dignity of material transformed — eggshell mosaic hand-laid by artisans in Hội An, breathing new life into what the world discards.</div>
+    </div>
+    <div class="eco-pillars">
+      <div class="eco-pillar"><div class="pillar-num">01</div><div class="pillar-title">Zero Waste</div><div class="pillar-desc">Sourced from local food producers. Nothing is wasted.</div></div>
+      <div class="eco-pillar"><div class="pillar-num">02</div><div class="pillar-title">Handcrafted</div><div class="pillar-desc">Each piece hand-laid by skilled artisans, 40+ hours per lamp.</div></div>
+      <div class="eco-pillar"><div class="pillar-num">03</div><div class="pillar-title">Heritage</div><div class="pillar-desc">Rooted in the lantern traditions of Hội An old town.</div></div>
+      <div class="eco-pillar"><div class="pillar-num">04</div><div class="pillar-title">Small Batch</div><div class="pillar-desc">Made to order. No overproduction. Ever.</div></div>
+    </div>
+  </div>
+
+  <div class="products-section" style="padding:5rem 3rem">
+    <div class="products-header">
+      <div>
+        <div class="section-label">Featured Works</div>
+        <div class="section-title">Current Collection</div>
+      </div>
+      <button class="btn btn-dark" onclick="showPage('shop')">View All</button>
+    </div>
+    <div class="product-grid" id="home-products"></div>
+  </div>
+
+  <div class="vision-section">
+    <div class="section-label">Brand Vision</div>
+    <div class="vision-quote">"We believe the most radical act of design is to refuse to create new waste — and to find extraordinary beauty in what already exists."</div>
+    <div class="vision-line"></div>
+    <div class="section-body" style="text-align:center;margin:0 auto;color:var(--mid);font-size:0.85rem">Kippy Coop is a slow brand. We produce in batches, by hand, on your timeline. Pre-order a piece and we'll craft it within your season.</div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">
+      <span class="logo dark">Kippy Coop</span>
+      <p>Handcrafted eggshell artistry.<br>Hội An, Vietnam.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a onclick="showPage('story')">Our Story</a>
+      <a onclick="showPage('collection')">Collection</a>
+      <a onclick="showPage('shop')">Shop</a>
+    </div>
+    <div class="footer-col">
+      <h4>Account</h4>
+      <a onclick="showPage('login')">Sign In</a>
+      <a onclick="showPage('login')">Pre-order Tracker</a>
+      <a onclick="showPage('login')">My Orders</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a>hello@kippycoop.com</a>
+      <a>Instagram</a>
+      <a>Trade Enquiries</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Kippy Coop. All rights reserved.</span>
+      <span>Hội An, Quảng Nam, Vietnam</span>
+    </div>
+  </footer>
+</div>
+
+<!-- STORY PAGE -->
+<div class="page" id="page-story">
+  <div style="height:64px;background:var(--dark)"></div>
+  <div class="story-hero">
+    <div class="story-hero-title">The Story<br>Behind the Shell</div>
+  </div>
+  <div class="story-content">
+    <div class="story-chapter">
+      <div class="chapter-num">Chapter One · Ecology</div>
+      <div class="chapter-title">Made from nothing wasted</div>
+      <div class="chapter-body">Every year, Vietnam's food industry discards billions of eggshells — calcium-rich, structurally complex, and entirely overlooked. Kippy Coop began with a single question: what if this material could become something extraordinary?<br><br>We collect shells from local producers in Quảng Nam province, clean them through a waterless process, and prepare them for the hands of our artisans. Nothing is shipped far. Nothing is synthesised. The shell is the material — unchanged in essence, transformed in form.</div>
+    </div>
+    <div class="story-divider"></div>
+    <div class="story-chapter">
+      <div class="chapter-num">Chapter Two · Craft</div>
+      <div class="chapter-title">40 hours per lamp</div>
+      <div class="chapter-body">Our artisans in Hội An's old town spend an average of 40 hours on a single lamp shade. Each fragment is hand-selected for tone and texture, applied piece by piece in a mosaic tradition that draws from centuries of Vietnamese lacquerware.<br><br>No two pieces are identical. The irregularities are not imperfections — they are the signature of human hands, present in every surface. We do not sand them away.</div>
+    </div>
+    <div class="story-divider"></div>
+    <div class="story-chapter">
+      <div class="chapter-num">Chapter Three · Heritage</div>
+      <div class="chapter-title">Hội An and the lantern tradition</div>
+      <div class="chapter-body">Hội An has been a city of light for over four centuries. Its famous lanterns — hung across every alley and canal — represent a living tradition of artisanship that survived colonisation, war, and globalisation.<br><br>Kippy Coop is rooted in this heritage. Our forms echo the organic geometry of the traditional lồng đèn, reimagined through a contemporary lens. We work with families who have made lanterns for generations, extending their practice rather than replacing it.</div>
+    </div>
+    <div class="story-divider"></div>
+    <div class="story-chapter">
+      <div class="chapter-num">Chapter Four · Material</div>
+      <div class="chapter-title">Eggshell paper — a new surface</div>
+      <div class="chapter-body">Beyond lighting, we have developed a proprietary eggshell paper — a tactile, off-white sheet embedded with crushed shell particles that catch light in unexpected ways. It is used for wrapping, stationery, and as an art medium in its own right.<br><br>The paper is made in small runs using recycled mulberry pulp from Mekong Delta producers. Each sheet is slightly different in weight and texture — qualities that make it beloved by artists and designers who work with it.</div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-brand"><span class="logo dark">Kippy Coop</span><p>Handcrafted eggshell artistry.<br>Hội An, Vietnam.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><a onclick="showPage('home')">Home</a><a onclick="showPage('collection')">Collection</a><a onclick="showPage('shop')">Shop</a></div>
+    <div class="footer-col"><h4>Contact</h4><a>hello@kippycoop.com</a><a>Instagram</a></div>
+    <div class="footer-col"></div>
+  </footer>
+</div>
+
+<!-- COLLECTION PAGE -->
+<div class="page" id="page-collection">
+  <div style="height:64px;background:var(--dark)"></div>
+  <div class="collection-header">
+    <div class="section-label">Archive</div>
+    <div class="section-title">Collections</div>
+    <div class="section-body" style="margin-top:1rem">Grouped by season and project. Each series is a distinct design language — same material, different soul.</div>
+  </div>
+  <div class="series-grid">
+    <div class="series-card series-bg-1" onclick="showPage('shop')">
+      <div class="series-info"><div class="series-season">Spring / Summer 2025</div><div class="series-name">Mekong Dawn</div><div class="series-count">8 pieces</div></div>
+    </div>
+    <div class="series-card series-bg-2" onclick="showPage('shop')">
+      <div class="series-info"><div class="series-season">Autumn / Winter 2025</div><div class="series-name">Monsoon Quiet</div><div class="series-count">6 pieces</div></div>
+    </div>
+    <div class="series-card series-bg-3" onclick="showPage('shop')">
+      <div class="series-info"><div class="series-season">Special Project · 2024</div><div class="series-name">Old Quarter</div><div class="series-count">4 pieces · Sold out</div></div>
+    </div>
+    <div class="series-card series-bg-4" onclick="showPage('shop')">
+      <div class="series-info"><div class="series-season">Spring / Summer 2026</div><div class="series-name">Lantern Hour</div><div class="series-count">Coming soon</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SHOP PAGE -->
+<div class="page" id="page-shop">
+  <div style="height:64px;background:var(--light)"></div>
+  <div class="shop-header">
+    <div class="section-label">All Works</div>
+    <div class="section-title" style="font-size:clamp(1.5rem,3vw,2.2rem)">Shop</div>
+  </div>
+  <div class="shop-controls">
+    <div class="filter-group">
+      <button class="filter-btn active" onclick="filterShop('all',this)">All</button>
+      <button class="filter-btn" onclick="filterShop('lamp',this)">Lamps</button>
+      <button class="filter-btn" onclick="filterShop('paper',this)">Paper</button>
+      <button class="filter-btn" onclick="filterShop('object',this)">Objects</button>
+    </div>
+    <select class="sort-select" onchange="sortShop(this.value)">
+      <option value="default">Sort: Featured</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+  </div>
+  <div class="shop-grid" id="shop-grid"></div>
+</div>
+
+<!-- LOGIN / ACCOUNT PAGE -->
+<div class="page" id="page-login">
+  <div class="auth-page">
+    <div class="auth-visual">
+      <div class="auth-visual-text">Your orders,<br>your story,<br>your light.</div>
+    </div>
+    <div class="auth-form-wrap">
+      <div class="auth-form">
+        <div class="auth-title">My Account</div>
+        <div class="auth-sub">Sign in to track your pre-orders and manage your collection.</div>
+        <div class="auth-tabs">
+          <button class="auth-tab active" onclick="switchAuthTab('signin',this)">Sign In</button>
+          <button class="auth-tab" onclick="switchAuthTab('register',this)">Register</button>
+          <button class="auth-tab" onclick="switchAuthTab('orders',this)">My Orders</button>
+        </div>
+        <div id="auth-signin">
+          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Password</label><input type="password" placeholder="••••••••"></div>
+          <button class="btn btn-dark" style="width:100%;text-align:center" onclick="switchAuthTab('orders',document.querySelectorAll('.auth-tab')[2])">Sign In</button>
+          <p style="font-size:0.75rem;color:var(--mid);text-align:center;margin-top:1rem;cursor:pointer">Forgot password?</p>
+        </div>
+        <div id="auth-register" style="display:none">
+          <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Password</label><input type="password" placeholder="Create password"></div>
+          <button class="btn btn-dark" style="width:100%;text-align:center" onclick="switchAuthTab('orders',document.querySelectorAll('.auth-tab')[2])">Create Account</button>
+        </div>
+        <div id="auth-orders" style="display:none">
+          <div class="orders-list">
+            <div class="order-item">
+              <div class="order-header"><span class="order-id">#KC-0041</span><span class="order-status status-production">In Production</span></div>
+              <div class="order-name">Mekong Dawn — Pendant Lamp, Medium</div>
+              <div class="order-detail">Qty: 6 · Est. ready: March 2026</div>
+            </div>
+            <div class="order-item">
+              <div class="order-header"><span class="order-id">#KC-0038</span><span class="order-status status-ready">Ready to Ship</span></div>
+              <div class="order-name">Eggshell Writing Paper — Set of 20</div>
+              <div class="order-detail">Qty: 10 sets · Shipped to: Ho Chi Minh City</div>
+            </div>
+            <div class="order-item">
+              <div class="order-header"><span class="order-id">#KC-0029</span><span class="order-status status-pending">Pending Batch</span></div>
+              <div class="order-name">Monsoon Quiet — Table Lamp</div>
+              <div class="order-detail">Qty: 5 · Batch opens: Dec 2025</div>
+            </div>
+          </div>
+          <p style="font-size:0.72rem;color:var(--mid);margin-top:1.5rem;line-height:1.7">Pre-orders are confirmed when your batch of 5 minimum is met. You'll receive an email update when production begins.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-head">
+    <h3>Cart</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-body">
+    <div class="cart-item">
+      <div class="cart-item-img"><div class="product-visual lamp" style="width:40px;height:36px"></div></div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">Mekong Dawn — Pendant, M</div>
+        <div class="cart-item-meta">Pre-order · Min. 5 units</div>
+        <div class="cart-item-price">$420.00 × 5</div>
+      </div>
+    </div>
+    <div class="cart-item">
+      <div class="cart-item-img"><div class="product-visual" style="width:36px;height:36px;border-radius:2px"></div></div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">Eggshell Paper — Set of 20</div>
+        <div class="cart-item-meta">In stock</div>
+        <div class="cart-item-price">$48.00 × 1</div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Subtotal</span><span>$2,148.00</span></div>
+    <div class="preorder-info">Pre-orders require min. 5 units per design. Your order enters production once the batch is confirmed.</div>
+    <button class="btn btn-dark" style="width:100%;text-align:center">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- PRE-ORDER MODAL -->
+<div class="modal-overlay" id="preorder-modal">
+  <div class="modal">
+    <div class="modal-title" id="modal-product-name">Pendant Lamp — Medium</div>
+    <div class="modal-sub">This is a pre-order item. A minimum of 5 units are required to open a production batch. We'll notify you by email when your batch is confirmed.</div>
+    <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+    <div class="form-group"><label>Quantity</label><input type="number" value="5" min="5" id="modal-qty"><div class="qty-note">Minimum order: 5 units</div></div>
+    <div class="form-group"><label>Preferred Season</label>
+      <select><option>Spring / Summer 2026</option><option>Autumn / Winter 2026</option><option>No preference</option></select>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-dark" onclick="closeModal()">Submit Pre-order</button>
+      <button class="modal-close" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
